@@ -129,5 +129,8 @@ dmypy.json
 .pyre/
 
 
+# Downloaded data
 data/
+models/
+vitruvion.sif
 
