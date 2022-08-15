@@ -1,0 +1,7 @@
+# @package _global_
+
+# Config for training on 4x P100 (pralexa)
+
+mixed_precision: False
+batch_size: 512
+num_gpus: 4

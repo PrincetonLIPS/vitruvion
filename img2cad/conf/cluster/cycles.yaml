@@ -1,0 +1,4 @@
+# @package _global_
+
+data:
+  sequence_path: /n/fs/sketchgraphs/sg_filtered_unique.npy

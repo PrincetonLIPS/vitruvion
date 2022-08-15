@@ -1,0 +1,11 @@
+# @package _global_
+
+# Configuration for training sketchgraph baseline on Vitruvion data.
+
+defaults:
+  - base_sketchgraphs
+
+max_epochs: 30
+mixed_precision: True
+optim:
+  learning_rate: 1e-4

@@ -1,0 +1,8 @@
+# @package _global_
+
+# Disables use of noisy images and data augmentation for image to primitive model.
+
+data:
+  use_noisy_images: True
+  augmentation:
+    enabled: False

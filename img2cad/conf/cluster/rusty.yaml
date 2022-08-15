@@ -1,0 +1,4 @@
+# @package _global_
+
+data:
+  sequence_path: /mnt/ceph/users/wzhou/projects/gencad/img2cad/data/sg_filtered_unique.npy
