@@ -33,12 +33,12 @@ We have listed the corresponding calling sequences for the evaluation below.
 
 Image to primitive model evaluation (table 2)
 ```bash
-./start_singularity.sh python -m img2cad.evaluation.evaluate_image_to_primitive checkpoint_path=models/image_to_primitive.ckpt
+./start_singularity.sh python -m img2cad.evaluation.evaluate_image_to_primitive checkpoint_path=models/image_to_primitive.ckpt sequence_path=data/sg_filtered_unique.npy
 ```
 
 Constraint model (table 4)
 ```bash
-./start_singularity.sh python -m img2cad.evaluation.evaluate_constraints checkpoint_path=models/constraints.ckpt
+./start_singularity.sh python -m img2cad.evaluation.evaluate_constraints checkpoint_path=models/constraints.ckpt sequence_path=data/sg_filtered_unique.npy
 ```
 
 ## Training

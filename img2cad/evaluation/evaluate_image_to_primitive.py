@@ -1,9 +1,12 @@
 
+import copy
 import dataclasses
 import functools
 import logging
 import os
 import pickle
+
+from typing import Optional
 
 
 import hydra
@@ -19,6 +22,7 @@ from img2cad.evaluation.evaluate_raw_primitives import evaluate_model, compute_l
 @dataclasses.dataclass
 class ImageToPrimitiveEvaluationConfig:
     checkpoint_path: str = omegaconf.MISSING
+    sequence_path: Optional[str] = None
     batch_size: int = 2048
 
 
@@ -41,8 +45,15 @@ def main(config: ImageToPrimitiveEvaluationConfig):
     model = model.eval()
     model = model.to(device=device, dtype=dtype)
 
+    data_config = copy.deepcopy(model.hparams.data)
+
+    if config.sequence_path is not None:
+        data_config.sequence_path = hydra.utils.to_absolute_path(config.sequence_path)
+        data_config.image_data_folder = None
+
     datamodule = primitives_data.ImagePrimitiveDataModule(
-        model.hparams.data, batch_size=config.batch_size)
+        data_config, batch_size=config.batch_size)
+    datamodule.prepare_data()
     datamodule.setup()
 
     dataloader = datamodule.test_dataloader()

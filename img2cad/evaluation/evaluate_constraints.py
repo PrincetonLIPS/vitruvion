@@ -29,8 +29,8 @@ def main(config: ConstraintEvaluationConfig):
     data_config_no_noise.primitive_noise.enabled = False
 
     if config.sequence_path is not None:
-        data_config.sequence_path = config.sequence_path
-        data_config_no_noise.sequence_path = config.sequence_path
+        data_config.sequence_path = hydra.utils.to_absolute_path(config.sequence_path)
+        data_config_no_noise.sequence_path = hydra.utils.to_absolute_path(config.sequence_path)
 
     datamodule_noise = constraint_data.ConstraintDataModule(
         data_config, 1024)
