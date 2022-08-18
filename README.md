@@ -1,6 +1,6 @@
 # Vitruvion
 
-This repository contains code and data in support of [Seff, A., Zhou, W., Richardson, N. and Adams, R.P., 2021, September. Vitruvion: A Generative Model of Parametric CAD Sketches. In International Conference on Learning Representations](https://arxiv.org/abs/2109.14124).
+This repository contains code and data in support of [Seff, A., Zhou, W., Richardson, N. and Adams, R.P. Vitruvion: A Generative Model of Parametric CAD Sketches. In International Conference on Learning Representations (ICLR) 2022](https://arxiv.org/abs/2109.14124).
 
 ## Getting started
 
