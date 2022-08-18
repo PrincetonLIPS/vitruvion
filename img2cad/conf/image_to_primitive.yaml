@@ -1,0 +1,18 @@
+# @package _global_
+
+# Configuration for main image-to-primitive model.
+
+defaults:
+  - base_image_to_primitive
+  - model: transformer
+
+optim:
+  learning_rate: 3e-5
+
+data:
+  use_noisy_images: True
+  augmentation:
+    enabled: True
+
+num_data_workers: 16
+max_epochs: 40

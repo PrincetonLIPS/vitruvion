@@ -1,0 +1,17 @@
+# @package _global_
+
+defaults:
+  - base_primitives_raw
+
+model:
+  num_heads: 8
+  num_layers: 12
+  hidden_size: 384
+  embedding_dimension: 256
+  num_positional_embeddings: 16
+
+optim:
+  learning_rate: 3e-5
+
+max_epochs: 30
+num_data_workers: 16

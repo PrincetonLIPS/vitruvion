@@ -1,0 +1,10 @@
+defaults:
+  - base_transformer
+
+input_size: 128
+patch_size: 16
+num_heads: 8
+num_layers: 12
+hidden_size: 384
+embedding_dimension: 256
+num_positional_embeddings: 16

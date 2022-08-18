@@ -127,3 +127,11 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+
+# Downloaded data
+data/
+models/
+outputs/
+vitruvion.sif
+
