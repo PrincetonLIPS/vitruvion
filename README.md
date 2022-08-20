@@ -41,6 +41,15 @@ Constraint model (table 4)
 ./start_singularity.sh python -m img2cad.evaluation.evaluate_constraints checkpoint_path=models/constraints.ckpt sequence_path=data/sg_filtered_unique.npy
 ```
 
+Raw primitives model (table 2)
+```bash
+# To evaluate log-likelihood
+./start_singularity.sh python -m img2cad.evaluation.evaluate_raw_primitives checkpoint_path=models/primitives_raw.ckpt sequence_path=data/sg_filtered_unique.npy
+
+# To sample (potentially primed by prefix of sequence)
+./start_singularity.sh python -m img2cad.evaluation.sample_primitives_primed checkpoint_path=models/primitives_raw.ckpt sequence_path=data/sg_filtered_unique.npy prefix_fraction=0
+```
+
 ## Training
 
 The two main models (image to primitive, and primitive to constraints) may be trained (after downloading all data files) in the following fashion:
