@@ -80,7 +80,7 @@ class SamplePrimitivesPrimedConfig:
     sequence_path: Optional[str] = None
 
 
-@hydra.main(config_name='conf')
+@hydra.main(config_name='conf', config_path=None)
 def main(config: SamplePrimitivesPrimedConfig):
     model: primitives_models.RawPrimitiveModule = primitives_models.RawPrimitiveModule.load_from_checkpoint(
         hydra.utils.to_absolute_path(config.checkpoint_path))
